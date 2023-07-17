@@ -41,11 +41,11 @@ def main():
         X_train, X_test, y_train, y_test = train_test_split(df[feature_cols], df[target_col], test_size=0.2, random_state=42)
         model.fit(X_train, y_train)
 
-        st.header("Code Snippet for Model")
-        st.code(generate_code(model_type, feature_cols, target_col))
-
         st.header("Test the Model")
         test_model(model, feature_cols)
+
+        st.header("Code Snippet for Model")
+        st.code(generate_code(model_type, feature_cols, target_col))
 
 def process_file(uploaded_file):
     if uploaded_file.name.endswith('.csv'):
