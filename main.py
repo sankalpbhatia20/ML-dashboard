@@ -56,7 +56,7 @@ def process_file(uploaded_file):
 
 def select_features_target(df):
     st.write("Choose Feature Variables and Target Variable")
-    feature_cols = st.multiselect("Select feature variables", df.columns, default=[df.columns[0]])
+    feature_cols = st.multiselect("Select feature variables", df.columns, default=[df.columns[1]])
     target_col = st.selectbox("Select target variable", df.columns)
     return feature_cols, target_col
 
