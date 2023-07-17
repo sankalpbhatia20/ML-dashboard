@@ -20,9 +20,6 @@ def main():
         st.write("Preview of the uploaded data:")
         st.write(df)
 
-        st.header("Data Cleaning and Preprocessing")
-        # Perform data cleaning and preprocessing here
-
         st.header("Choose a Machine Learning Model")
         model_type = st.selectbox("Select a model type", ["Linear Regression", "Logistic Regression", "Random Forest"])
 
